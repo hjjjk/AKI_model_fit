@@ -21,10 +21,9 @@ with st.form("my_form"):
       x_test = np.array([[slider_shenzang,slider_age,slider_niaosuan]])
       explainer = shap.TreeExplainer(model)
       shap_values = explainer.shap_values(x_test)
-      plt.xticks(fontproperties='Microsoft YaHei', size=15)
-      plt.yticks(fontproperties='Microsoft YaHei', size=20)
+      
       shap.force_plot(explainer.expected_value[0], shap_values, x_test,
-                      feature_names=['慢性肾脏病分期(shenzang)', '年龄(age)', '尿酸(niaosuan)'], matplotlib=True, show=False)
+                      feature_names=['shenzang', 'age', 'niaosuan'], matplotlib=True, show=False)
       
       plt.tight_layout()
       plt.tight_layout()

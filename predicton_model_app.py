@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 warnings.filterwarnings('ignore')
 
-model = joblib.load("classifier_RF final 8-feature model.m")
+model = joblib.load("aki_prediction_model.m")
 
 with st.form("my_form"):
    slider_Bodyweight = st.number_input('Body weight')
